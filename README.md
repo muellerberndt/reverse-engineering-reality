@@ -1,6 +1,6 @@
 # Reverse Engineering Reality
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18288114.svg)](https://doi.org/10.5281/zenodo.18288114) | [PDF](paper/observer_patch_holography.pdf)
+[DOI: 10.5281/zenodo.18288114](https://doi.org/10.5281/zenodo.18288114) | [Paper (PDF)](paper/observer_patch_holography.pdf) | [Book (PDF)](book/REVERSE_ENGINEERING_REALITY.pdf)
 
 > **Important Disclaimer:** This is highly speculative work in progress. The framework presented here is **not proven correct** and the probability that it accurately describes reality is low. While the mathematical structures are internally consistent and produce some numerical matches, this does not constitute evidence of correctness. Many theories with good-looking math have been wrong. The precision matches could be coincidental, the assumptions could be flawed, and the entire conceptual foundation could be mistaken. This material is shared for research discussion, not as established physics. **Treat all claims with appropriate skepticism.**
 >
