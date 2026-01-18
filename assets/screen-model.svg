@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Gradients for the sphere -->
+    <radialGradient id="sphereGradient" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#e8f4fc" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#a0c4e8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4a90c2" stop-opacity="0.4"/>
+    </radialGradient>
+
+    <!-- Observer patch colors -->
+    <radialGradient id="patch1Gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ff6b6b" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="patch2Gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ecdc4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4ecdc4" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="patch3Gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe66d" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffe66d" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <!-- Overlap blend -->
+    <radialGradient id="overlapGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <!-- 4D emergence gradient -->
+    <linearGradient id="emergenceGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a90c2" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a0c4e8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e8f4fc" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Stronger glow for 4D emergence -->
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a0c4e8"/>
+    </marker>
+
+    <marker id="arrowheadWhite" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffffff" fill-opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a0a1a"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#e0e0e0">
+    The Holographic Screen: 2D to 4D
+  </text>
+
+  <!-- ==================== LEFT SIDE: 2D SCREEN ==================== -->
+
+  <!-- Emergent bulk grid (inside sphere, faint) -->
+  <g opacity="0.15" stroke="#4a90c2" stroke-width="0.5" fill="none">
+    <ellipse cx="240" cy="280" rx="90" ry="30"/>
+    <ellipse cx="240" cy="280" rx="60" ry="20"/>
+    <ellipse cx="240" cy="280" rx="30" ry="10"/>
+    <line x1="150" y1="280" x2="330" y2="280"/>
+    <line x1="240" y1="180" x2="240" y2="380"/>
+  </g>
+
+  <!-- Main sphere outline -->
+  <ellipse cx="240" cy="280" rx="150" ry="150"
+           fill="url(#sphereGradient)"
+           stroke="#4a90c2" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Triangulation pattern on sphere surface -->
+  <g stroke="#4a90c2" stroke-width="0.5" stroke-opacity="0.3" fill="none">
+    <ellipse cx="240" cy="280" rx="150" ry="30"/>
+    <ellipse cx="240" cy="235" rx="130" ry="26"/>
+    <ellipse cx="240" cy="325" rx="130" ry="26"/>
+    <ellipse cx="240" cy="190" rx="90" ry="18"/>
+    <ellipse cx="240" cy="370" rx="90" ry="18"/>
+    <path d="M 240 130 Q 300 280 240 430"/>
+    <path d="M 240 130 Q 180 280 240 430"/>
+    <path d="M 240 130 Q 350 250 240 430"/>
+    <path d="M 240 130 Q 130 250 240 430"/>
+  </g>
+
+  <!-- Observer Patch 1 (Red, upper left) -->
+  <ellipse cx="190" cy="220" rx="60" ry="45"
+           fill="url(#patch1Gradient)"
+           transform="rotate(-20, 190, 220)"/>
+
+  <!-- Observer Patch 2 (Teal, upper right) -->
+  <ellipse cx="300" cy="235" rx="52" ry="40"
+           fill="url(#patch2Gradient)"
+           transform="rotate(15, 300, 235)"/>
+
+  <!-- Observer Patch 3 (Yellow, lower) -->
+  <ellipse cx="225" cy="345" rx="55" ry="38"
+           fill="url(#patch3Gradient)"
+           transform="rotate(-5, 225, 345)"/>
+
+  <!-- Overlap region -->
+  <ellipse cx="245" cy="228" rx="22" ry="18"
+           fill="url(#overlapGradient)"
+           filter="url(#glow)"/>
+
+  <!-- Observer icons -->
+  <g transform="translate(182, 212)">
+    <circle cx="0" cy="-6" r="5" fill="#ff6b6b" stroke="#fff" stroke-width="1"/>
+    <ellipse cx="0" cy="2" rx="3" ry="5" fill="#ff6b6b" stroke="#fff" stroke-width="1"/>
+  </g>
+  <g transform="translate(308, 228)">
+    <circle cx="0" cy="-6" r="5" fill="#4ecdc4" stroke="#fff" stroke-width="1"/>
+    <ellipse cx="0" cy="2" rx="3" ry="5" fill="#4ecdc4" stroke="#fff" stroke-width="1"/>
+  </g>
+  <g transform="translate(218, 340)">
+    <circle cx="0" cy="-6" r="5" fill="#ffe66d" stroke="#fff" stroke-width="1"/>
+    <ellipse cx="0" cy="2" rx="3" ry="5" fill="#ffe66d" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- 2D label -->
+  <text x="240" y="460" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#4a90c2">
+    2D Holographic Screen (S^2)
+  </text>
+  <text x="240" y="478" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#707090">
+    Conf(S^2) = SO(3,1)
+  </text>
+
+  <!-- ==================== CENTER: EMERGENCE ARROW ==================== -->
+
+  <!-- Large emergence arrow -->
+  <g transform="translate(400, 280)">
+    <!-- Arrow body with glow -->
+    <path d="M -20 0 L 50 0" stroke="url(#emergenceGradient)" stroke-width="4"
+          marker-end="url(#arrowhead)" filter="url(#glow)"/>
+
+    <!-- Wavy lines suggesting transformation -->
+    <path d="M -15 -20 Q 0 -15, 15 -20 Q 30 -25, 45 -20"
+          stroke="#a0c4e8" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+    <path d="M -15 20 Q 0 15, 15 20 Q 30 25, 45 20"
+          stroke="#a0c4e8" stroke-width="1" stroke-opacity="0.5" fill="none"/>
+  </g>
+
+  <!-- Emergence label -->
+  <text x="420" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#a0c4e8">
+    entanglement
+  </text>
+  <text x="420" y="258" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#a0c4e8">
+    structure
+  </text>
+  <text x="420" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#707090">
+    emerges as
+  </text>
+
+  <!-- ==================== RIGHT SIDE: 4D SPACETIME (Observer's View) ==================== -->
+
+  <!-- 4D spacetime visualization - perspective grid -->
+  <g transform="translate(600, 280)">
+    <!-- Receding grid lines suggesting depth (z-axis into page) -->
+    <g stroke="#4a90c2" stroke-opacity="0.3" fill="none">
+      <!-- Horizontal planes at different depths -->
+      <ellipse cx="0" cy="0" rx="110" ry="35"/>
+      <ellipse cx="0" cy="-40" rx="85" ry="27" stroke-opacity="0.25"/>
+      <ellipse cx="0" cy="-70" rx="60" ry="19" stroke-opacity="0.2"/>
+      <ellipse cx="0" cy="40" rx="85" ry="27" stroke-opacity="0.25"/>
+      <ellipse cx="0" cy="70" rx="60" ry="19" stroke-opacity="0.2"/>
+
+      <!-- Vertical lines suggesting 3D depth -->
+      <line x1="-110" y1="0" x2="-60" y2="-70" stroke-opacity="0.2"/>
+      <line x1="110" y1="0" x2="60" y2="-70" stroke-opacity="0.2"/>
+      <line x1="-110" y1="0" x2="-60" y2="70" stroke-opacity="0.2"/>
+      <line x1="110" y1="0" x2="60" y2="70" stroke-opacity="0.2"/>
+      <line x1="0" y1="-35" x2="0" y2="-89"/>
+      <line x1="0" y1="35" x2="0" y2="89"/>
+    </g>
+
+    <!-- Time axis (vertical, glowing) -->
+    <line x1="0" y1="100" x2="0" y2="-100" stroke="#e8f4fc" stroke-width="2"
+          stroke-opacity="0.6" stroke-dasharray="8,4"/>
+    <text x="8" y="-90" font-family="Georgia, serif" font-size="10" fill="#e8f4fc" fill-opacity="0.8">t</text>
+
+    <!-- Spatial axes -->
+    <line x1="-100" y1="30" x2="100" y2="-30" stroke="#a0c4e8" stroke-width="1.5" stroke-opacity="0.4"/>
+    <text x="95" y="-40" font-family="Georgia, serif" font-size="10" fill="#a0c4e8" fill-opacity="0.6">x</text>
+
+    <line x1="-80" y1="-20" x2="80" y2="20" stroke="#a0c4e8" stroke-width="1.5" stroke-opacity="0.4"/>
+    <text x="75" y="35" font-family="Georgia, serif" font-size="10" fill="#a0c4e8" fill-opacity="0.6">y</text>
+
+    <!-- z-axis (into page, suggested by perspective) -->
+    <path d="M 0 0 L 0 -50" stroke="#a0c4e8" stroke-width="1.5" stroke-opacity="0.3"
+          marker-end="url(#arrowheadWhite)"/>
+    <text x="-12" y="-55" font-family="Georgia, serif" font-size="10" fill="#a0c4e8" fill-opacity="0.6">z</text>
+
+    <!-- Observer at center of their 4D world -->
+    <circle cx="0" cy="0" r="12" fill="#ffffff" fill-opacity="0.15" filter="url(#strongGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#ff6b6b" stroke="#fff" stroke-width="1"/>
+    <ellipse cx="0" cy="10" rx="4" ry="6" fill="#ff6b6b" stroke="#fff" stroke-width="1"/>
+
+    <!-- Light cone suggestion -->
+    <path d="M 0 0 L -50 -60 M 0 0 L 50 -60" stroke="#ffe66d" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="4,3"/>
+    <path d="M 0 0 L -50 60 M 0 0 L 50 60" stroke="#ffe66d" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="4,3"/>
+    <text x="55" y="-55" font-family="Georgia, serif" font-size="9" fill="#ffe66d" fill-opacity="0.5">light cone</text>
+  </g>
+
+  <!-- 4D label -->
+  <text x="600" y="460" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#e8f4fc">
+    4D Spacetime (3+1)
+  </text>
+  <text x="600" y="478" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#707090">
+    Lorentz symmetry SO(3,1)
+  </text>
+
+  <!-- ==================== BOTTOM PANELS ==================== -->
+
+  <!-- Key box (left) -->
+  <g transform="translate(20, 500)">
+    <rect x="0" y="0" width="230" height="85" rx="5" fill="#1a1a2e" stroke="#4a90c2" stroke-opacity="0.4"/>
+    <text x="10" y="18" font-family="Georgia, serif" font-size="11" fill="#e0e0e0" font-weight="bold">Key:</text>
+    <text x="10" y="35" font-family="Georgia, serif" font-size="10" fill="#a0a0a0">Colored patches = observer perspectives</text>
+    <text x="10" y="50" font-family="Georgia, serif" font-size="10" fill="#a0a0a0">White overlap = consistency constraints</text>
+    <text x="10" y="65" font-family="Georgia, serif" font-size="10" fill="#a0a0a0">Same symmetry group on both sides!</text>
+  </g>
+
+  <!-- Explanation box (right) -->
+  <g transform="translate(550, 500)">
+    <rect x="0" y="0" width="230" height="85" rx="5" fill="#1a1a2e" stroke="#4a90c2" stroke-opacity="0.4"/>
+    <text x="10" y="18" font-family="Georgia, serif" font-size="10" fill="#e0e0e0" font-style="italic">
+      The observer sees 4D spacetime emerge
+    </text>
+    <text x="10" y="33" font-family="Georgia, serif" font-size="10" fill="#e0e0e0" font-style="italic">
+      from entanglement between patches.
+    </text>
+    <text x="10" y="53" font-family="Georgia, serif" font-size="10" fill="#707090">
+      Screen conformal symmetry = bulk Lorentz
+    </text>
+    <text x="10" y="68" font-family="Georgia, serif" font-size="10" fill="#707090">
+      The extra dimensions are encoded in
+    </text>
+    <text x="10" y="80" font-family="Georgia, serif" font-size="10" fill="#707090">
+      how screen regions relate.
+    </text>
+  </g>
+
+  <!-- Center quote -->
+  <g transform="translate(260, 508)">
+    <rect x="0" y="0" width="280" height="72" rx="5" fill="#1a1a2e" stroke="#4a90c2" stroke-opacity="0.4"/>
+    <text x="140" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#e0e0e0" font-style="italic">
+      "The screen is the computation.
+    </text>
+    <text x="140" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#e0e0e0" font-style="italic">
+      Observer patches are the threads.
+    </text>
+    <text x="140" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#e0e0e0" font-style="italic">
+      Reality is what they agree on."
+    </text>
+  </g>
+</svg>

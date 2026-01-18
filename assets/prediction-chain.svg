@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2400" width="1800" height="2400">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="inputGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="axiomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a4e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="derivedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#533483;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a1c71;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="predictGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c23a50;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="testGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d68910;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a9eff"/>
+    </marker>
+    <marker id="arrowheadGold" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1800" height="2400" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  </pattern>
+  <rect width="1800" height="2400" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="900" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff">
+    Observer Patch Holography: From Axioms to Reality
+  </text>
+  <text x="900" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8888aa">
+    How two parameters and four axioms derive all features of physics
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 1: FUNDAMENTAL INPUTS (Top) -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="900" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#4a9eff">
+    CONFIGURATION PARAMETERS
+  </text>
+
+  <!-- Pixel Area Box -->
+  <rect x="200" y="170" width="350" height="140" rx="15" fill="url(#inputGrad)" stroke="#4a9eff" stroke-width="3" filter="url(#shadow)"/>
+  <text x="375" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a9eff">Pixel Area</text>
+  <text x="375" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">a_cell ≈ 1.63 ℓ_P²</text>
+  <text x="375" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#aaaacc">Resolution of reality</text>
+  <text x="375" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888899">√a_cell ≈ 2.06 × 10⁻³⁵ m</text>
+
+  <!-- Screen Capacity Box -->
+  <rect x="1250" y="170" width="350" height="140" rx="15" fill="url(#inputGrad)" stroke="#4a9eff" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1425" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a9eff">Screen Capacity</text>
+  <text x="1425" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">log(dim H) ~ 10¹²²</text>
+  <text x="1425" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#aaaacc">Size of reality</text>
+  <text x="1425" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888899">Inferred from observed Λ</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 2: CORE AXIOMS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="900" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00cc88">
+    CORE AXIOMS
+  </text>
+
+  <!-- A1: Screen -->
+  <rect x="100" y="390" width="280" height="100" rx="12" fill="url(#axiomGrad)" stroke="#00cc88" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00cc88">A1: Screen</text>
+  <text x="240" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">2D holographic boundary</text>
+  <text x="240" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaaacc">Gauge-invariant quantum system</text>
+
+  <!-- A2: Patch -->
+  <rect x="420" y="390" width="280" height="100" rx="12" fill="url(#axiomGrad)" stroke="#00cc88" stroke-width="2" filter="url(#shadow)"/>
+  <text x="560" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00cc88">A2: Patch</text>
+  <text x="560" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Observer subsystems</text>
+  <text x="560" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaaacc">Boundary-gauge-invariant algebras</text>
+
+  <!-- A3: Overlap -->
+  <rect x="740" y="390" width="280" height="100" rx="12" fill="url(#axiomGrad)" stroke="#00cc88" stroke-width="2" filter="url(#shadow)"/>
+  <text x="880" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00cc88">A3: Overlap Consistency</text>
+  <text x="880" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Descriptions must agree</text>
+  <text x="880" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaaacc">Central axiom: intersubjectivity</text>
+
+  <!-- A4: Markov -->
+  <rect x="1060" y="390" width="280" height="100" rx="12" fill="url(#axiomGrad)" stroke="#00cc88" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1200" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00cc88">A4: Markov Collars</text>
+  <text x="1200" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Approximate recoverability</text>
+  <text x="1200" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaaacc">Exponential locality</text>
+
+  <!-- MaxEnt -->
+  <rect x="1380" y="390" width="280" height="100" rx="12" fill="url(#axiomGrad)" stroke="#00cc88" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1520" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00cc88">B: MaxEnt</text>
+  <text x="1520" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Maximum entropy selection</text>
+  <text x="1520" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaaacc">Gibbs states from constraints</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 3: FIRST-ORDER DERIVATIONS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- Connecting arrows from axioms -->
+  <line x1="375" y1="310" x2="375" y2="340" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1425" y1="310" x2="1425" y2="340" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="375" y1="340" x2="880" y2="340" stroke="#4a9eff" stroke-width="2"/>
+  <line x1="1425" y1="340" x2="880" y2="340" stroke="#4a9eff" stroke-width="2"/>
+  <line x1="880" y1="340" x2="880" y2="385" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <text x="900" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#aa66ff">
+    EMERGENT STRUCTURE
+  </text>
+
+  <!-- Arrows from axioms to derived -->
+  <path d="M 240 490 Q 240 520 300 545" stroke="#00cc88" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 560 490 Q 560 530 500 555" stroke="#00cc88" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 880 490 Q 880 530 880 555" stroke="#00cc88" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 1200 490 Q 1200 530 1100 555" stroke="#00cc88" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 1520 490 Q 1520 530 1400 555" stroke="#00cc88" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Lorentz -->
+  <rect x="100" y="560" width="250" height="90" rx="10" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#aa66ff">Lorentz Invariance</text>
+  <text x="225" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Conf(S²) ≅ SO(3,1)</text>
+  <text x="225" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaacc">Special relativity emerges</text>
+
+  <!-- Gauge -->
+  <rect x="380" y="560" width="250" height="90" rx="10" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="505" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#aa66ff">Gauge Symmetry</text>
+  <text x="505" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Overlap redundancy</text>
+  <text x="505" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaacc">Compact groups from fusion</text>
+
+  <!-- Einstein -->
+  <rect x="660" y="560" width="250" height="90" rx="10" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#aa66ff">Einstein Equations</text>
+  <text x="785" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Entanglement equilibrium</text>
+  <text x="785" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaacc">Jacobson mechanism</text>
+
+  <!-- Edge Sectors -->
+  <rect x="940" y="560" width="250" height="90" rx="10" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1065" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#aa66ff">Edge Sectors</text>
+  <text x="1065" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Heat-kernel weighting</text>
+  <text x="1065" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaacc">p_R ∝ d_R exp(-tC₂(R))</text>
+
+  <!-- 4D Spacetime -->
+  <rect x="1220" y="560" width="250" height="90" rx="10" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1345" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#aa66ff">4D Spacetime</text>
+  <text x="1345" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">From 2D entanglement</text>
+  <text x="1345" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaacc">Holographic reconstruction</text>
+
+  <!-- Modular Flow -->
+  <rect x="1500" y="560" width="250" height="90" rx="10" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1625" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#aa66ff">Modular Flow</text>
+  <text x="1625" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Time from algebra</text>
+  <text x="1625" y="632" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaacc">K = 2πB with 2π fixed</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 4: PHYSICAL CONSEQUENCES -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="900" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e94560">
+    PHYSICAL PREDICTIONS
+  </text>
+
+  <!-- Connecting lines -->
+  <line x1="225" y1="650" x2="225" y2="730" stroke="#aa66ff" stroke-width="2"/>
+  <line x1="505" y1="650" x2="505" y2="730" stroke="#aa66ff" stroke-width="2"/>
+  <line x1="785" y1="650" x2="785" y2="730" stroke="#aa66ff" stroke-width="2"/>
+  <line x1="1065" y1="650" x2="1065" y2="730" stroke="#aa66ff" stroke-width="2"/>
+  <line x1="1345" y1="650" x2="1345" y2="730" stroke="#aa66ff" stroke-width="2"/>
+  <line x1="1625" y1="650" x2="1625" y2="730" stroke="#aa66ff" stroke-width="2"/>
+  <line x1="225" y1="730" x2="1625" y2="730" stroke="#aa66ff" stroke-width="2"/>
+
+  <!-- === EXACT ZEROS === -->
+  <text x="250" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e94560">
+    Exact Zeros (Symmetry Protected)
+  </text>
+
+  <rect x="50" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Photon Mass</text>
+  <text x="140" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">m_γ = 0 exactly</text>
+  <text x="140" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">&lt; 10⁻¹⁸ eV confirmed</text>
+
+  <rect x="250" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Graviton Mass</text>
+  <text x="340" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">m_g = 0 exactly</text>
+  <text x="340" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">&lt; 10⁻²³ eV confirmed</text>
+
+  <rect x="450" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="540" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Gluon Mass</text>
+  <text x="540" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">m_g = 0 exactly</text>
+  <text x="540" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">Gauge invariance</text>
+
+  <!-- === PRECISION MATCHES === -->
+  <text x="900" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e94560">
+    Precision Predictions
+  </text>
+
+  <rect x="660" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">α_s(M_Z)</text>
+  <text x="750" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">0.1175 predicted</text>
+  <text x="750" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">0.1177±0.0009 (PDG)</text>
+
+  <rect x="860" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">sin²θ_W(M_Z)</text>
+  <text x="950" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">0.2311 predicted</text>
+  <text x="950" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">0.23129 (0.1% match)</text>
+
+  <rect x="1060" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Top Mass</text>
+  <text x="1150" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">172.2 GeV predicted</text>
+  <text x="1150" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">172.7 GeV (0.3%)</text>
+
+  <rect x="1260" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1350" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Higgs Mass</text>
+  <text x="1350" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">125.08 GeV predicted</text>
+  <text x="1350" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">125.09±0.24 (PDG)</text>
+
+  <rect x="1460" y="800" width="180" height="70" rx="8" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1550" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">EW Scale</text>
+  <text x="1550" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffcccc">243.5 GeV predicted</text>
+  <text x="1550" y="860" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffaaaa">246.2 GeV (1.1%)</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 5: STRUCTURAL PREDICTIONS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="450" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f39c12">
+    Structural Predictions (Z₆ Quotient)
+  </text>
+
+  <rect x="50" y="950" width="240" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Charge Quantization</text>
+  <text x="170" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c2c3e">Z₆ congruence rule</text>
+  <text x="170" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">|q_p + q_e|/e &lt; 10⁻²¹</text>
+
+  <rect x="310" y="950" width="240" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Entropy Deficit</text>
+  <text x="430" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c2c3e">log₂ 6 ≈ 2.585 bits</text>
+  <text x="430" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">Global-structure observable</text>
+
+  <rect x="570" y="950" width="240" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="690" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Yukawa Hierarchy</text>
+  <text x="690" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c2c3e">y_f ∝ 6^{-n_f}</text>
+  <text x="690" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">ε = 1/6 fixed topologically</text>
+
+  <!-- === CASIMIR RATIOS === -->
+  <text x="1200" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f39c12">
+    Parameter-Free Casimir Ratios
+  </text>
+
+  <rect x="860" y="950" width="130" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="925" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Δ₈/Δ₃</text>
+  <text x="925" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2c2c3e">9/4</text>
+  <text x="925" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">= 2.25 exactly</text>
+
+  <rect x="1010" y="950" width="130" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Δ₆/Δ₃</text>
+  <text x="1075" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2c2c3e">5/2</text>
+  <text x="1075" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">= 2.5 exactly</text>
+
+  <rect x="1160" y="950" width="130" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1225" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Δ₁₅/Δ₃</text>
+  <text x="1225" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2c2c3e">4</text>
+  <text x="1225" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">exactly</text>
+
+  <rect x="1310" y="950" width="130" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1375" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Δ₁₀/Δ₃</text>
+  <text x="1375" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2c2c3e">9/2</text>
+  <text x="1375" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">= 4.5 exactly</text>
+
+  <rect x="1460" y="950" width="130" height="85" rx="8" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1525" y="978" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Δ₂₇/Δ₃</text>
+  <text x="1525" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2c2c3e">6</text>
+  <text x="1525" y="1020" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3c3c4e">exactly</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 6: BLACK HOLE PREDICTIONS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="450" y="1100" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00bcd4">
+    Black Hole Spectroscopy
+  </text>
+
+  <rect x="50" y="1120" width="260" height="100" rx="8" fill="#0d3d4d" stroke="#00bcd4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="1148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00bcd4">Log-Integer Comb</text>
+  <text x="180" y="1170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">E_k = k_B T_H ln(k)</text>
+  <text x="180" y="1190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aacccc">Discrete Hawking spectrum</text>
+  <text x="180" y="1208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#88aaaa">k = 2, 3, 4, ...</text>
+
+  <rect x="330" y="1120" width="260" height="100" rx="8" fill="#0d3d4d" stroke="#00bcd4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460" y="1148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00bcd4">Universal Ratios</text>
+  <text x="460" y="1170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">E_k/E₂ = ln(k)/ln(2)</text>
+  <text x="460" y="1190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aacccc">E₃/E₂ = 1.585 exactly</text>
+  <text x="460" y="1208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#88aaaa">Parameter-free</text>
+
+  <rect x="610" y="1120" width="260" height="100" rx="8" fill="#0d3d4d" stroke="#00bcd4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="1148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00bcd4">Fractional Linewidth</text>
+  <text x="740" y="1170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Γ/ΔE_k ≈ 3-5%</text>
+  <text x="740" y="1190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aacccc">Mass-independent</text>
+  <text x="740" y="1208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#88aaaa">Shape prediction</text>
+
+  <!-- === GR BOUNDS === -->
+  <text x="1200" y="1100" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00bcd4">
+    GR Deviation Bounds
+  </text>
+
+  <rect x="930" y="1120" width="300" height="100" rx="8" fill="#0d3d4d" stroke="#00bcd4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="1148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00bcd4">Markov Defect Identity</text>
+  <text x="1080" y="1170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">⟨ΔK⟩ = −I(A:D|B)</text>
+  <text x="1080" y="1190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aacccc">CMI controls modular defect</text>
+  <text x="1080" y="1208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#88aaaa">Exact information-theoretic identity</text>
+
+  <rect x="1250" y="1120" width="300" height="100" rx="8" fill="#0d3d4d" stroke="#00bcd4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1400" y="1148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00bcd4">Exponential Suppression</text>
+  <text x="1400" y="1170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">|⟨ΔK⟩| ≤ 2|A| · η^{w/ξ}</text>
+  <text x="1400" y="1190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aacccc">Ceiling on GR violations</text>
+  <text x="1400" y="1208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#88aaaa">Quantitative UV→IR control</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 7: GUT ADVANTAGES -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="900" y="1290" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2ecc71">
+    WHY OPH SUCCEEDS WHERE GUTS FAIL
+  </text>
+
+  <rect x="50" y="1310" width="340" height="110" rx="10" fill="#1a3d2e" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="1340" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2ecc71">Proton Stability</text>
+  <text x="220" y="1365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Gauge group is product, not embedded</text>
+  <text x="220" y="1385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaddaa">No X/Y leptoquark bosons</text>
+  <text x="220" y="1405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#88bb88">τ_p &gt; 10³⁴ yr confirmed</text>
+
+  <rect x="420" y="1310" width="340" height="110" rx="10" fill="#1a3d2e" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="1340" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2ecc71">Geometric Unification</text>
+  <text x="590" y="1365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Shared edge diffusion parameter</text>
+  <text x="590" y="1385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaddaa">Coupling unification ≠ group unification</text>
+  <text x="590" y="1405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#88bb88">No doublet-triplet splitting needed</text>
+
+  <rect x="790" y="1310" width="340" height="110" rx="10" fill="#1a3d2e" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="1340" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2ecc71">No Magnetic Monopoles</text>
+  <text x="960" y="1365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Product structure → no topological defects</text>
+  <text x="960" y="1385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaddaa">None observed despite decades of search</text>
+  <text x="960" y="1405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#88bb88">Sector factorization explains absence</text>
+
+  <rect x="1160" y="1310" width="340" height="110" rx="10" fill="#1a3d2e" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1330" y="1340" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2ecc71">UV Finiteness</text>
+  <text x="1330" y="1365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Fundamental DoF finite (screen)</text>
+  <text x="1330" y="1385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaddaa">Continuum is emergent</text>
+  <text x="1330" y="1405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#88bb88">Already UV complete by construction</text>
+
+  <rect x="1530" y="1310" width="220" height="110" rx="10" fill="#1a3d2e" stroke="#2ecc71" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1640" y="1340" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2ecc71">Λ Problem</text>
+  <text x="1640" y="1365" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Λ is global capacity</text>
+  <text x="1640" y="1385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaddaa">Not locally computable</text>
+  <text x="1640" y="1405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#88bb88">Dissolves fine-tuning</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 8: EXPLAINED PHYSICS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="900" y="1480" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#9b59b6">
+    EXPLAINED FEATURES OF REALITY
+  </text>
+
+  <!-- Row 1 -->
+  <rect x="50" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="150" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Special Relativity</text>
+  <text x="150" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Lorentz from Conf(S²)</text>
+
+  <rect x="270" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="370" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">General Relativity</text>
+  <text x="370" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Einstein from entanglement</text>
+
+  <rect x="490" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="590" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Gauge Forces</text>
+  <text x="590" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">From overlap redundancy</text>
+
+  <rect x="710" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="810" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">CPT Invariance</text>
+  <text x="810" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Lorentz + locality</text>
+
+  <rect x="930" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1030" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Charge Conservation</text>
+  <text x="1030" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Gauge invariance</text>
+
+  <rect x="1150" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1250" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Holographic Bounds</text>
+  <text x="1250" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Information on boundaries</text>
+
+  <rect x="1370" y="1500" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1470" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Bell Violations</text>
+  <text x="1470" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">≤ Tsirelson bound</text>
+
+  <rect x="1590" y="1500" width="160" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1670" y="1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">No Preferred Frame</text>
+  <text x="1670" y="1545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">No external observer</text>
+
+  <!-- Row 2 -->
+  <rect x="50" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="150" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Three Colors</text>
+  <text x="150" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Witten anomaly + minimality</text>
+
+  <rect x="270" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="370" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Three Generations</text>
+  <text x="370" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">CP + asymp. freedom</text>
+
+  <rect x="490" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="590" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Mass Hierarchy</text>
+  <text x="590" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Z₆ defect suppression</text>
+
+  <rect x="710" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="810" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Hypercharges</text>
+  <text x="810" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Exact rationals from Z₆</text>
+
+  <rect x="930" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1030" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Measurement Problem</text>
+  <text x="1030" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Observer synchronization</text>
+
+  <rect x="1150" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1250" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">BH Information</text>
+  <text x="1250" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Unitarity from consistency</text>
+
+  <rect x="1370" y="1580" width="200" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1470" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Area Quantization</text>
+  <text x="1470" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">From edge sectors</text>
+
+  <rect x="1590" y="1580" width="160" height="65" rx="8" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1670" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Arrow of Time</text>
+  <text x="1670" y="1625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddccee">Modular flow</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 9: BETA COEFFICIENTS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="450" y="1710" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#3498db">
+    MSSM-like Beta Shifts (Derived, Not Fitted)
+  </text>
+
+  <rect x="50" y="1730" width="260" height="90" rx="8" fill="#1a3d5c" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="1758" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">Δb₁</text>
+  <text x="180" y="1782" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#ffffff">2.49 (predicted)</text>
+  <text x="180" y="1805" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaccee">2.5 MSSM target (&lt;1%)</text>
+
+  <rect x="330" y="1730" width="260" height="90" rx="8" fill="#1a3d5c" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460" y="1758" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">Δb₂</text>
+  <text x="460" y="1782" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#ffffff">4.17 (predicted)</text>
+  <text x="460" y="1805" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaccee">4.17 MSSM target (exact)</text>
+
+  <rect x="610" y="1730" width="260" height="90" rx="8" fill="#1a3d5c" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="1758" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">Δb₃</text>
+  <text x="740" y="1782" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#ffffff">4.01 (predicted)</text>
+  <text x="740" y="1805" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaccee">4.0 MSSM target (&lt;1%)</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LAYER 10: FALSIFIERS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="1350" y="1710" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e74c3c">
+    FALSIFIABLE BY
+  </text>
+
+  <rect x="930" y="1730" width="380" height="90" rx="8" fill="#3d1a1a" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="1755" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Nonzero photon/graviton mass</text>
+  <text x="1120" y="1775" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Proton decay via X/Y bosons</text>
+  <text x="1120" y="1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Wrong Casimir ratios (not 9/4, 5/2, 4...)</text>
+  <text x="1120" y="1815" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Wrong Z₆ entropy deficit (not 2.585 bits)</text>
+
+  <rect x="1330" y="1730" width="420" height="90" rx="8" fill="#3d1a1a" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1540" y="1755" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Information exceeding Bekenstein bound</text>
+  <text x="1540" y="1775" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Bell violations exceeding Tsirelson bound</text>
+  <text x="1540" y="1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Non-integer Yukawa exponents −ln(y)/ln(6)</text>
+  <text x="1540" y="1815" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffaaaa">• Absence of GW/Hawking spectral comb</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SUMMARY BOX -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <rect x="100" y="1870" width="1600" height="220" rx="20" fill="#0d1a26" stroke="#4a9eff" stroke-width="3" filter="url(#shadow)"/>
+
+  <text x="900" y="1910" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">
+    THE BOTTOM LINE
+  </text>
+
+  <text x="900" y="1955" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#4a9eff">
+    One Principle: Observers must agree where they overlap
+  </text>
+
+  <text x="900" y="1995" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00cc88">
+    Two Parameters: Pixel area (1.63 ℓ_P²) + Screen capacity (10¹²² nats)
+  </text>
+
+  <text x="900" y="2035" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#aa66ff">
+    Four Axioms: Screen + Patch + Overlap Consistency + Markov Collars
+  </text>
+
+  <text x="900" y="2075" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-style="italic">
+    Result: Lorentz invariance, Einstein equations, gauge structure, massless force carriers,
+  </text>
+  <text x="900" y="2095" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-style="italic">
+    charge quantization, coupling unification, proton stability, mass hierarchy — all from consistency.
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LEGEND -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <text x="900" y="2150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#888899">
+    LEGEND
+  </text>
+
+  <rect x="200" y="2170" width="20" height="20" rx="4" fill="url(#inputGrad)" stroke="#4a9eff" stroke-width="2"/>
+  <text x="230" y="2186" font-family="Arial, sans-serif" font-size="12" fill="#aaaacc">Configuration Parameters (Inputs)</text>
+
+  <rect x="500" y="2170" width="20" height="20" rx="4" fill="url(#axiomGrad)" stroke="#00cc88" stroke-width="2"/>
+  <text x="530" y="2186" font-family="Arial, sans-serif" font-size="12" fill="#aaaacc">Core Axioms</text>
+
+  <rect x="700" y="2170" width="20" height="20" rx="4" fill="url(#derivedGrad)" stroke="#aa66ff" stroke-width="2"/>
+  <text x="730" y="2186" font-family="Arial, sans-serif" font-size="12" fill="#aaaacc">Emergent Structure</text>
+
+  <rect x="950" y="2170" width="20" height="20" rx="4" fill="url(#predictGrad)" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="980" y="2186" font-family="Arial, sans-serif" font-size="12" fill="#aaaacc">Quantitative Predictions</text>
+
+  <rect x="1200" y="2170" width="20" height="20" rx="4" fill="url(#testGrad)" stroke="#f5b041" stroke-width="2"/>
+  <text x="1230" y="2186" font-family="Arial, sans-serif" font-size="12" fill="#aaaacc">Testable/Parameter-Free</text>
+
+  <rect x="1450" y="2170" width="20" height="20" rx="4" fill="#2d1f3d" stroke="#9b59b6" stroke-width="2"/>
+  <text x="1480" y="2186" font-family="Arial, sans-serif" font-size="12" fill="#aaaacc">Explained Physics</text>
+
+  <!-- Footer -->
+  <text x="900" y="2250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666677">
+    Observer Patch Holography — The universe isn't built to be consistent. Consistency is what builds the universe.
+  </text>
+
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#4a9eff" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="1750" cy="50" r="30" fill="none" stroke="#4a9eff" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="50" cy="2350" r="30" fill="none" stroke="#4a9eff" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="1750" cy="2350" r="30" fill="none" stroke="#4a9eff" stroke-width="1" stroke-opacity="0.3"/>
+
+</svg>

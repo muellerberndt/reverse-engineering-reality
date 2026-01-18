@@ -1,0 +1,119 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: 'Helvetica', 'Arial', sans-serif; font-size: 32px; font-weight: bold; fill: #1a202c; }
+    .subtitle { font-family: 'Helvetica', 'Arial', sans-serif; font-size: 20px; font-weight: normal; fill: #4a5568; }
+    .header-box { fill: #2b6cb0; }
+    .header-text { font-family: 'Helvetica', 'Arial', sans-serif; font-size: 18px; font-weight: bold; fill: #ffffff; }
+    .label { font-family: 'Helvetica', 'Arial', sans-serif; font-size: 16px; font-weight: bold; fill: #2d3748; }
+    .body-text { font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; fill: #4a5568; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; font-size: 20px; fill: #000; }
+    .math-bold { font-family: 'Times New Roman', serif; font-weight: bold; font-size: 24px; fill: #000; }
+    .panel-bg { fill: #f7fafc; stroke: #cbd5e0; stroke-width: 2; rx: 10; }
+    .highlight-box { fill: #ebf8ff; stroke: #4299e1; stroke-width: 2; rx: 5; }
+    .arrow { stroke: #2b6cb0; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2b6cb0" />
+    </marker>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#cbd5e0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <text x="600" y="50" text-anchor="middle" class="title">THE PIXEL CONSTANT</text>
+  <text x="600" y="80" text-anchor="middle" class="subtitle">Deriving the fundamental resolution of the Universe</text>
+
+  <g transform="translate(50, 120)">
+    <rect width="320" height="450" class="panel-bg" />
+    <rect width="320" height="40" rx="10" ry="10" class="header-box" />
+    <text x="160" y="27" text-anchor="middle" class="header-text">1. MACROSCOPIC INPUT (G)</text>
+    
+    <g transform="translate(160, 150)">
+      <circle r="60" fill="url(#grad1)" stroke="#2b6cb0" stroke-width="2" fill-opacity="0.2"/>
+      <circle r="5" fill="#2b6cb0" />
+      <path d="M -80 0 L -65 0 M 65 0 L 80 0 M 0 -80 L 0 -65 M 0 65 L 0 80" stroke="#2b6cb0" stroke-width="1"/>
+      <text x="0" y="90" text-anchor="middle" class="label">Spacetime Geometry</text>
+    </g>
+    
+    <text x="160" y="300" text-anchor="middle" class="body-text">We observe gravity strength G:</text>
+    <text x="160" y="340" text-anchor="middle" class="math-bold">G = 6.674 × 10⁻¹¹ m³ kg⁻¹ s⁻²</text>
+    <text x="160" y="380" text-anchor="middle" class="body-text" width="280">
+      <tspan x="160" dy="0">In the Bekenstein-Hawking</tspan>
+      <tspan x="160" dy="20">view, G is the conversion factor</tspan>
+      <tspan x="160" dy="20">between Area and Entropy.</tspan>
+    </text>
+  </g>
+
+  <path d="M 380 345 L 430 345" class="arrow" />
+
+  <g transform="translate(440, 120)">
+    <rect width="320" height="450" class="panel-bg" />
+    <rect width="320" height="40" rx="10" ry="10" class="header-box" />
+    <text x="160" y="27" text-anchor="middle" class="header-text">2. ENTROPY MATCHING</text>
+    
+    <g transform="translate(20, 80)">
+      <text x="0" y="0" class="label">Step A: Equate Entropies</text>
+      <text x="20" y="30" class="math">S<tspan dy="5" font-size="14">macro</tspan> = S<tspan dy="0" font-size="14">micro</tspan></text>
+      
+      <text x="0" y="70" class="label">Step B: Substitute Definitions</text>
+      <line x1="20" y1="105" x2="60" y2="105" stroke="black" stroke-width="1"/>
+      <text x="40" y="100" text-anchor="middle" class="math">Area</text>
+      <text x="40" y="125" text-anchor="middle" class="math">4G</text>
+      
+      <text x="80" y="112" class="math">=</text>
+      
+      <text x="100" y="112" class="math">N<tspan dy="5" font-size="14">pixels</tspan> · <tspan dy="-5">ℓ</tspan><tspan dy="-10">_</tspan><tspan dy="10"></tspan>(t)</text>
+      
+      <text x="0" y="160" class="label">Step C: Decompose Area</text>
+      <text x="20" y="190" class="math">Area = N<tspan dy="5" font-size="14">pixels</tspan> · a<tspan dy="0" font-size="14">cell</tspan></text>
+      
+      <rect x="0" y="220" width="280" height="110" class="highlight-box" />
+      <text x="140" y="245" text-anchor="middle" class="label">Step D: Solve for Pixel Area</text>
+      
+      <g transform="translate(70, 260)">
+         <text x="0" y="30" class="math">a<tspan dy="5" font-size="14">cell</tspan> = 4G · <tspan dy="-5">ℓ</tspan><tspan dy="-10">_</tspan></text>
+      </g>
+      
+      <text x="140" y="315" text-anchor="middle" class="body-text" font-style="italic">G is the scaling factor!</text>
+    </g>
+  </g>
+
+  <path d="M 770 345 L 820 345" class="arrow" />
+
+  <g transform="translate(830, 120)">
+    <rect width="320" height="450" class="panel-bg" />
+    <rect width="320" height="40" rx="10" ry="10" class="header-box" />
+    <text x="160" y="27" text-anchor="middle" class="header-text">3. OUTPUT: THE PIXEL</text>
+    
+    <g transform="translate(60, 100)">
+      <rect width="200" height="200" fill="url(#grid)" stroke="#cbd5e0" stroke-width="2" />
+      
+      <circle cx="100" cy="100" r="60" fill="white" stroke="#2d3748" stroke-width="3" />
+      <rect x="75" y="75" width="50" height="50" fill="#4299e1" fill-opacity="0.2" stroke="#2b6cb0" stroke-width="2" />
+      <line x1="145" y1="145" x2="180" y2="180" stroke="#2d3748" stroke-width="8" stroke-linecap="round" />
+      
+      <path d="M 70 75 L 65 75 M 70 125 L 65 125 M 67 75 L 67 125" stroke="#2b6cb0" stroke-width="1" />
+      <text x="55" y="105" text-anchor="end" class="math" font-size="14">√a<tspan dy="2" font-size="10">cell</tspan></text>
+    </g>
+
+    <text x="160" y="340" text-anchor="middle" class="label">Calculated Value:</text>
+    <text x="160" y="380" text-anchor="middle" class="math-bold">a<tspan dy="5" font-size="18">cell</tspan> ≈ 1.63 ℓ<tspan dy="0" font-size="18">P</tspan><tspan dy="-10" font-size="14">2</tspan></text>
+    
+    <text x="160" y="420" text-anchor="middle" class="body-text">
+      <tspan x="160" dy="0">The fundamental resolution</tspan>
+      <tspan x="160" dy="20">limit of our Universe.</tspan>
+    </text>
+  </g>
+
+  <text x="600" y="620" text-anchor="middle" class="body-text" font-size="12">
+    ℓ̄ (edge entropy density) is derived from Standard Model gauge couplings (approx 0.408 nats).
+  </text>
+  <text x="600" y="640" text-anchor="middle" class="body-text" font-size="12">
+    G (Newton's Constant) serves as the experimental input to fix the scale.
+  </text>
+
+</svg>
