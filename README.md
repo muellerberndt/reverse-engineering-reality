@@ -4,10 +4,6 @@
 
 **Read:** [How OPH Addresses Major Open Problems in Physics](https://medium.com/@muellerberndt/answering-10-of-the-hardest-questions-in-physics-and-some-bonus-questions-51222bf2419f)
 
-> **Important Disclaimer:** This is highly speculative work in progress. The framework presented here is **not proven correct** and the probability that it accurately describes reality is low. While the mathematical structures are internally consistent and produce some numerical matches, this does not constitute evidence of correctness. Many theories with good-looking math have been wrong. The precision matches could be coincidental, the assumptions could be flawed, and the entire conceptual foundation could be mistaken. This material is shared for research discussion, not as established physics. **Treat all claims with appropriate skepticism.**
->
-> Contents change rapidly as we refine the ideas and address open gaps.
-
 Physics is reverse engineering at cosmic scale. We observe reality's behavior and work backward to reconstruct the underlying rules. This project is an attempt to contribute to that effort.
 
 ## The Core Idea
@@ -390,10 +386,12 @@ Note that Hamiltonian evolution is not the same as the time experienced "inside"
 
 This is speculative, but it's not science fiction. The physics is well-defined enough to simulate. If the model is right, the ultimate validation wouldn't be a mathematical proof. It would be switching on a small holographic screen and watching spacetime flicker into existence.
 
+## Contributing
+
+For corrections, suggestions, or additions, please open a pull request.
+
 ## License
 
-(C) Bernhard Mueller 2025. Shared for research and educational purposes.
+This work is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). You are free to share and adapt this material for non-commercial purposes with attribution.
 
----
-
-*Critiques welcome. That's how reverse engineering works.*
+(C) Bernhard Mueller 2026
