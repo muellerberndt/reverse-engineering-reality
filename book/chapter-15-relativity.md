@@ -319,7 +319,7 @@ Now consider two observers with overlapping patches. Each has their own modular 
 2. Preserve the consistency structure (overlaps must still agree)
 3. Do not single out any particular patch as special
 
-The group of such transformations is the conformal group of $S^2$. This is a mathematical fact about the sphere's geometry. And Conf$(S^2) \cong$ SO(3,1) is the Lorentz group.
+The group of such transformations is the conformal group of $S^2$. This is a mathematical fact about the sphere's geometry. And $\text{Conf}(S^2) \cong$ SO(3,1) is the Lorentz group.
 
 So Lorentz invariance is not imposed from outside. It is the *only* way different observer perspectives can be consistently related without privileging any one of them.
 

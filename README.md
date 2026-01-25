@@ -90,7 +90,7 @@ The total entropy of the holographic screen (in nats). This sets the *size* of r
 
 $$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H})}$$
 
-lets us extract screen capacity from the measured $\Lambda \sim 10^{-52}$ m$^{-2}$, giving $\log(\dim \mathcal{H}) \sim 10^{122}$.
+lets us extract screen capacity from the measured $\Lambda \sim 10^{-52}$ $\text{m}^{-2}$, giving $\log(\dim \mathcal{H}) \sim 10^{122}$.
 
 | Quantity | Value | Status |
 |----------|-------|--------|
@@ -181,7 +181,7 @@ The gauge-as-gluing principle (Section above) reconstructs compact gauge groups 
 
 **Massless graviton**: Diffeomorphism invariance (the symmetry underlying general relativity) emerges from the fact that bulk spacetime is a compression of screen data. A graviton mass would break this invariance. The graviton mass is exactly zero, confirmed to 22 orders of magnitude.
 
-**Three colors**: The Witten anomaly requires an odd number of quark colors. The minimal nontrivial choice is three. *Note: This requires a minimality selector; the axioms alone don't exclude $N_c = 5, 7, ...$*
+**Three colors**: The Witten anomaly requires an odd number of quark colors. The minimal nontrivial choice is three. *Note: This requires a minimality selector; the axioms alone don't exclude* $\mathit{N_c = 5, 7, ...}$
 
 **Three generations**: CP violation requires at least three generations; asymptotic freedom allows at most five. Minimality selects three. *Note: This also requires the minimality selector plus empirical CP violation as input.*
 

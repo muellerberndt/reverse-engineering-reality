@@ -238,7 +238,7 @@ From this single scale, we derive:
 $$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H}_{\text{tot}})}$$
 is used to **infer** screen capacity from the observed cosmological constant, not to predict $\Lambda$. The cosmological constant cannot be determined by local consistency conditions; it requires knowing the total degrees of freedom on the screen.
 
-From the observed $\Lambda \sim 10^{-52}$ m$^{-2}$, we infer:
+From the observed $\Lambda \sim 10^{-52}$ $\text{m}^{-2}$, we infer:
 - Screen capacity: $\log \dim \mathcal{H} \sim 10^{122}$
 - de Sitter horizon radius: $r_{dS} \approx 10^{26}$ m
 
@@ -292,7 +292,7 @@ sector selection that yields the SM factors.
 **Progress on numerical predictions.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
 The key insight: sector probabilities follow a heat-kernel law weighted by
-Laplacian eigenvalues (for $\mathbb{Z}_n$: $\lambda_q = 4\sin^2(\pi q/n)$).
+Laplacian eigenvalues (for $\mathbb{Z}_n$: $\lambda_q = 4\sin^2(\pi q/n)$ ).
 This has been confirmed to essentially exact precision in $\mathbb{Z}_2$ and
 $\mathbb{Z}_3$ models, where the extracted "modular time" $t$ agrees across
 different charge sectors to numerical noise level.
