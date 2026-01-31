@@ -44,7 +44,7 @@ Think of the screen as a gauge-invariant quantum system on a 2-sphere. It resemb
 
 *The screen is the computation. Observer patches are the threads. Reality is what they agree on.*
 
-![The Holographic Screen](assets/screen-model.svg)
+<a href="assets/screen.jpg"><img src="assets/screen.jpg" alt="The Holographic Screen" width="800"></a>
 
 ### What Drives the Computation?
 
