@@ -346,6 +346,12 @@ The model is incomplete. The main gaps are:
 ### [Technical Paper](paper/PAPER.md)
 The formal development: axioms, theorems, proofs, and gap analysis.
 
+### Code
+
+| Script | Description |
+|--------|-------------|
+| [particle_masses.py](code/particle_masses.py) | Computes SM particle masses from OPH parameters |
+
 ### Book Chapters
 
 | Chapter | Title | Topic |
