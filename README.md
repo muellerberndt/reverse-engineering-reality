@@ -1,4 +1,4 @@
-# Reverse Engineering Reality
+# Observer Patch Holography: An Observer-Centric Approach to Fundamental Physics
 
 **Download:** [Technical Paper](https://doi.org/10.5281/zenodo.18288114) | [Book (Web)](https://oth-book.lovable.app)
 
