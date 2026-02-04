@@ -349,11 +349,15 @@ The formal development: axioms, theorems, proofs, and gap analysis.
 ### [Technical Supplement](paper/TECHNICAL_SUPPLEMENT.md)
 Complete mathematical derivations: emergence of gravity, measurement problem, dark matter, Koide formula, baryogenesis, and more.
 
+### [String Theory Derivation](paper/STRING_THEORY.md)
+How OPH implies string theory: edge sectors → 2D Yang-Mills → worldsheet expansion via Gross-Taylor duality.
+
 ### Code
 
 | Script | Description |
 |--------|-------------|
 | [particle_masses.py](code/particle_masses.py) | Computes SM particle masses from OPH parameters |
+| [entanglement_first_law.py](code/entanglement_first_law.py) | Verifies the entanglement first law δS = δ⟨K⟩ numerically |
 
 ### Book Chapters
 
