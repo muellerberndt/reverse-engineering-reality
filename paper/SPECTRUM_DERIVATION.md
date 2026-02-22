@@ -567,7 +567,7 @@ The predicted neutrino masses ($\sim 0.08$–$3$ meV) are below current direct-d
 
 ## 12. Reproduction Instructions
 
-All computations can be reproduced from the code in this repository.
+All computations can be reproduced from the code in [`code/particles/`](../code/particles/).
 
 ### 12.1 Prerequisites
 
@@ -577,10 +577,22 @@ pip install numpy
 
 No other dependencies are needed. The `pdg` and `pandas` packages are only required for `tools/fetch_pdg_data.py` (the PDG data fetcher, used for comparison only).
 
-### 12.2 Running the Full Prediction
+### 12.2 Code Files
+
+| File | Description | Stage |
+|------|-------------|-------|
+| [`particle_masses_stage5.py`](../code/particles/particle_masses_stage5.py) | Core spectrum prediction: gauge closure, transmutation, critical surface, Z₆ texture | 1–5 |
+| [`oph_qcd.py`](../code/particles/oph_qcd.py) | 4-loop MSbar β-coefficients and Λ extraction | 6 |
+| [`oph_lattice_su3_quenched_v5.py`](../code/particles/oph_lattice_su3_quenched_v5.py) | Quenched Wilson SU(3) lattice for hadron mass ratios | 6–7 |
+| [`oph_predict_compare.py`](../code/particles/oph_predict_compare.py) | Full predictor + PDG comparison (main entry point) | All |
+| [`oph_no_cheat_audit.py`](../code/particles/oph_no_cheat_audit.py) | Static anti-leak audit of prediction code | — |
+| [`test_oph_predict_compare.py`](../code/particles/test_oph_predict_compare.py) | Smoke tests + runtime no-cheat mutation test | — |
+| [`test_particle_masses_stage5.py`](../code/particles/test_particle_masses_stage5.py) | Regression tests for Stage 5 predictions | — |
+
+### 12.3 Running the Full Prediction
 
 ```bash
-cd temp/
+cd code/particles/
 
 # Full prediction with PDG comparison table
 python3 oph_predict_compare.py --compare
@@ -592,10 +604,10 @@ python3 oph_predict_compare.py --compare --json
 python3 oph_predict_compare.py --compare --with-hadrons --hadron-profile demo
 ```
 
-### 12.3 No-Cheat Verification
+### 12.4 No-Cheat Verification
 
 ```bash
-cd temp/
+cd code/particles/
 
 # Static audit: checks that build_spectrum() does not reference PDG values
 python3 oph_no_cheat_audit.py
@@ -604,17 +616,16 @@ python3 oph_no_cheat_audit.py
 python3 test_oph_predict_compare.py
 ```
 
-### 12.4 Individual Stages
+### 12.5 Individual Stages
 
 ```bash
+cd code/particles/
+
 # Stage 5 spectrum (core charged sector)
 python3 particle_masses_stage5.py
 
-# QCD scale extraction
-python3 particle_masses_stage6_v3.py --loops 4
-
-# Full particle ledger
-python3 oph_all_particles.py --compare
+# QCD scale extraction (standalone)
+python3 oph_qcd.py
 ```
 
 ### 12.5 Fetching PDG Reference Data

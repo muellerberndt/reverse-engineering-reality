@@ -70,6 +70,8 @@ The following infographic shows how the entire framework flows from two paramete
 
 *From axioms to reality: how overlap consistency derives all of physics.*
 
+> **Particle Spectrum Predictions**: The complete derivation from pixel area to particle masses — with comparison against PDG data and a full audit of every constant — is documented in **[From Pixel Area to Particle Masses](paper/SPECTRUM_DERIVATION.md)**. Five particles (W, Z, e, μ, τ) are predicted to < 0.04% accuracy; the Higgs and top quark to ~1%; all from a single input $P = 1.63094$.
+
 ## The Fundamental Parameters
 
 Our universe is characterized by exactly **two fundamental parameters**:
@@ -353,6 +355,9 @@ The formal development: axioms, theorems, proofs, and gap analysis.
 ### [Technical Supplement](paper/TECHNICAL_SUPPLEMENT.md)
 Complete mathematical derivations: emergence of gravity, measurement problem, dark matter, Koide formula, baryogenesis, and more.
 
+### [Particle Spectrum Derivation](paper/SPECTRUM_DERIVATION.md)
+End-to-end derivation of the Standard Model particle spectrum from pixel area, with PDG comparison tables and a complete audit of all constants.
+
 ### [String Theory Derivation](paper/STRING_THEORY.md)
 How OPH implies string theory: edge sectors → 2D Yang-Mills → worldsheet expansion via Gross-Taylor duality.
 
@@ -363,6 +368,11 @@ McCulloch's Quantised Inertia as an effective IR description of OPH: structural 
 
 | Script | Description |
 |--------|-------------|
+| [oph_predict_compare.py](code/particles/oph_predict_compare.py) | Full particle spectrum prediction + PDG comparison (main entry point) |
+| [particle_masses_stage5.py](code/particles/particle_masses_stage5.py) | Core spectrum: gauge closure, transmutation, critical surface, Z₆ texture |
+| [oph_qcd.py](code/particles/oph_qcd.py) | 4-loop MSbar QCD running and Λ extraction |
+| [oph_lattice_su3_quenched_v5.py](code/particles/oph_lattice_su3_quenched_v5.py) | Quenched Wilson SU(3) lattice for hadron mass ratios |
+| [oph_no_cheat_audit.py](code/particles/oph_no_cheat_audit.py) | Static + runtime anti-leak audit |
 | [entanglement_first_law.py](code/entanglement_first_law.py) | Verifies the entanglement first law δS = δ⟨K⟩ numerically |
 
 ### Book Chapters
